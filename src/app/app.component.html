@@ -1,14 +1,11 @@
 <h1>Angular 18 Essentials</h1>
 
-<h2>Handling User Interaction</h2>
+<h2>Sharing Code</h2>
 
-<h3>keyup and keydown</h3>
+<h3>Injecting services</h3>
 
-<input (keydown)="onKeydown($event)" (keyup)="onKeyup($event)">
+<p>private calculatorService = inject(CalculatorService);</p>
 
-<p>Pressed {{pressed}}</p>
 
-<p>Released {{released}}</p>
-
-<strong>If you need to access the event object, Angular provides an implicit $event variable that you can pass to a
-    function: (click)="createUser($event)"</strong>
+    
+   
