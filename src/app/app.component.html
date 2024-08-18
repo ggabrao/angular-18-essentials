@@ -1,27 +1,14 @@
 <h1>Angular 18 Essentials</h1>
 
-<h2>Conditionals and Loops</h2>
+<h2>Handling User Interaction</h2>
 
-<h3>1. Conditional rendering</h3>
+<h3>keyup and keydown</h3>
 
-<button (click)="switch()">Switch</button>
+<input (keydown)="onKeydown($event)" (keyup)="onKeyup($event)">
 
-@if (isOn) {
-<p>On (if)</p>
-} @else {
-<p>Off (else)</p>
-}
+<p>Pressed {{pressed}}</p>
 
-<hr>
+<p>Released {{released}}</p>
 
-<h3>2. Rendering a list</h3>
-
-<p>The items can later change or move. Angular tracks each element usually by
-    treating a property as a unique identifier with the track keyword: for (ingredient of ingredientList;
-    trackingredient.name)</p>
-
-<ul>
-    @for(member of family; track member.name) {
-    <li>{{member.position}}: {{member.name}}</li>
-    }
-</ul>
+<strong>If you need to access the event object, Angular provides an implicit $event variable that you can pass to a
+    function: (click)="createUser($event)"</strong>
