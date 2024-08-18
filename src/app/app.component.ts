@@ -9,9 +9,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'initial title';
+  isOn = false;
 
-  updateTitle() {
-    this.title = 'updated title';
+  switch() {
+    this.isOn = !this.isOn;
   }
+
+  family = [
+    { position: 'Father', name: 'Bob' },
+    { position: 'Mother', name: 'Marie' },
+    { position: 'Son', name: 'Tom' }
+  ]
+
 }

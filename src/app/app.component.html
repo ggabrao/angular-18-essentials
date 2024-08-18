@@ -1,30 +1,27 @@
 <h1>Angular 18 Essentials</h1>
 
-<h2>Rendering Dynamic Templates</h2>
+<h2>Conditionals and Loops</h2>
 
-<h3>1. Data</h3>
+<h3>1. Conditional rendering</h3>
 
-<strong>Whenever the data changes (in this case, with a function that sets another value), Angular will automatically
-    update
-    the DOM reflecting the new value (without making any new request).</strong>
+<button (click)="switch()">Switch</button>
 
-<p>{{title}}</p>
-
-<button (click)="updateTitle()">Update title</button>
-
-<hr>
-
-<h3>2. Properties</h3>
-
-<strong>Dynamically set the value of standard DOM properties on an HTML element:</strong>
-
-<p>button type="submit" [disabled]="formIsInvalid" (formIsInvalid will be a property in the component)</p>
+@if (isOn) {
+<p>On (if)</p>
+} @else {
+<p>Off (else)</p>
+}
 
 <hr>
 
-<h3>3. Attributes</h3>
+<h3>2. Rendering a list</h3>
 
-<strong>Square brackets will not work because CUSTOM HTML attributes are not standard DOM properties. We need to prepend
-    with the attr. </strong>
+<p>The items can later change or move. Angular tracks each element usually by
+    treating a property as a unique identifier with the track keyword: for (ingredient of ingredientList;
+    trackingredient.name)</p>
 
-<p>button [attr.data-test-id]="testId"</p>
+<ul>
+    @for(member of family; track member.name) {
+    <li>{{member.position}}: {{member.name}}</li>
+    }
+</ul>
