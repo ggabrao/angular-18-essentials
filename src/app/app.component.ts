@@ -9,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'essentials';
+  title = 'initial title';
+
+  updateTitle() {
+    this.title = 'updated title';
+  }
 }
