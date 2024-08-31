@@ -9,30 +9,28 @@
     }
 
     .inline {
-        width: 800px;
-        height: 600px;
         border: 1px solid red;
     }
 
     .image-container {
         width: 800px;
         height: 600px;
-        background-image: url(assets/photo.jpg);
-        background-size: cover;
         border: 1px solid gray;
-
+        position: relative;
     }
 </style>
 
 <div class="container">
     <div>
         <h3>Image with meaning -> HTML image (img tag)</h3>
-        <img class="inline" src="assets/angular.png" alt="">
+        <img class="inline" ngSrc="assets/angular.png" width="800" height="600" alt="" priority>
     </div>
 
     <div>
         <h3>Decorative image -> CSS image (background-image)</h3>
-        <div class="image-container"></div>
+        <div class="image-container">
+            <img ngSrc="assets/photo.jpg" fill alt="">
+        </div>
     </div>
 
 </div>
