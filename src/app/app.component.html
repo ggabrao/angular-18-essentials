@@ -1,11 +1,38 @@
 <h1>Angular 18 Essentials</h1>
 
-<h2>Sharing Code</h2>
+<h2>Images</h2>
 
-<h3>Injecting services</h3>
+<style>
+    .container {
+        display: flex;
+        gap: 20px;
+    }
 
-<p>private calculatorService = inject(CalculatorService);</p>
+    .inline {
+        width: 800px;
+        height: 600px;
+        border: 1px solid red;
+    }
 
+    .image-container {
+        width: 800px;
+        height: 600px;
+        background-image: url(assets/photo.jpg);
+        background-size: cover;
+        border: 1px solid gray;
 
-    
-   
+    }
+</style>
+
+<div class="container">
+    <div>
+        <h3>Image with meaning -> HTML image (img tag)</h3>
+        <img class="inline" src="assets/angular.png" alt="">
+    </div>
+
+    <div>
+        <h3>Decorative image -> CSS image (background-image)</h3>
+        <div class="image-container"></div>
+    </div>
+
+</div>
